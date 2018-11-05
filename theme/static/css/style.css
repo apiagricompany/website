@@ -8,6 +8,16 @@
 */
 
 /* Basic */
+	
+	@font-face {
+	    font-family: 'Better-Sans-Regular';
+	    src:url('../fonts/Better-Sans-Regular.ttf.woff') format('woff'),
+	        url('../fonts/Better-Sans-Regular.ttf.svg#Better-Sans-Regular') format('svg'),
+	        url('../fonts/Better-Sans-Regular.ttf.eot'),
+	        url('../fonts/Better-Sans-Regular.ttf.eot?#iefix') format('embedded-opentype'); 
+	    font-weight: normal;
+	    font-style: normal;
+	}
 
 	body, #skel-layers-wrapper {
 		background: #f3f6fa;
@@ -41,7 +51,8 @@
 		-o-transition: all 0.2s ease-in-out;
 		-ms-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
-		color: #3fb1a3;
+		/* color: #3fb1a3; */
+		color: #fbc02d;
 		text-decoration: none;
 		border-bottom: dotted 1px;
 	}
@@ -155,7 +166,7 @@
 			left: 0;
 			position: absolute;
 			text-align: center;
-			top: 1em;
+			top: 0;
 			width: 100%;
 		}
 
@@ -285,9 +296,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
 			font-style: normal;
-			font-weight: normal;
 		}
 
 		.icon.circle {
@@ -756,10 +765,10 @@
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #2b2b2b;
 		/*background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../images/banner.jpg");*/
-		/*background-image: url('images/banner-background.png');*/
+		background-image: url('images/banner-background.jpg');
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
+		background-size: cover;
 		color: white;
 		cursor: default;
 		padding: 6em 0;
@@ -782,7 +791,7 @@
 			-o-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			/*background: rgba(52, 27, 43, 0.5);*/
+			background: url('images/banner-background.jpg');
 			color: white;
 			display: inline-block;
 			opacity: 0;
@@ -801,13 +810,14 @@
 				#banner .inner header h2 {
 					border-bottom: solid 2px;
 					border-top: solid 2px;
-					font-size: 2.5em;
-					font-weight: 900;
+					font-family: "Better-Sans-Regular";
+					font-size: 4.5em;
+					font-weight: normal;
 					letter-spacing: 0.2em;
 					margin: 0;
 					padding-left: 0.05em;
 					position: relative;
-					text-transform: uppercase;
+					text-transform: lowercase;
 				}
 
 			#banner .inner p {
@@ -859,29 +869,48 @@
 /* CTA */
 
 	#cta {
+		z-index: 1;
+		position: relative;
+		color: #2b2b2b;
+		padding: 5em;
+		text-align: left;
+	}
+
+	#cta:before {
+		content: " ";
 		background-attachment: fixed;
 		background-color: #2b2b2b;
 		/*background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../images/banner.jpg");*/
 		background-image: url("images/cta-background.jpg");
 		background-position: center top;
 		background-repeat: no-repeat;
-		background-size: 100%;
-		color: white;
-		padding: 5em;
-		text-align: left;
+		background-size: cover;
+		
+		opacity: 0.6;
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 		#cta header {
 			margin-bottom: 2em;
 		}
 
+		#cta p{
+			font-weight: 400;
+		}
+
 /* Footer */
 
 	#footer {
-		background: #e8eef4;
-		color: #7c8081;
+		background: #2b2b2b;
+		color: #fbc02d;
 		padding: 5em 5em 10em 5em;
 		text-align: center;
+		font-weight: 400;
 	}
 
 		#footer .copyright {
