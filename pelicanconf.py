@@ -7,9 +7,10 @@ sys.path.append('.')
 
 AUTHOR = 'ApiAgri'
 SITENAME = 'ApiAgri'
-SITEURL = 'apiagri.com.br'
+SITEURL = 'apiagri.com'
 SITELOGO = 'images/logo.png'
-
+THEME = "theme"
+PATH = "content"
 TIMEZONE = 'America/Sao_Paulo'
 
 from utils import filters
@@ -40,7 +41,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 
 # Formatting for urls
 # ARTICLE_DIR = 'blog'
@@ -68,12 +69,11 @@ YEAR_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/index.html'
 # Show most recent posts first
 NEWEST_FIRST_ARCHIVES = True
 
-
-THEME = 'theme'
-
 STATIC_PATHS = [
     'images',
     'fonts',
     'css',
     'js'
 ]
+
+DISPLAY_BLOG_ON_MENU = False
