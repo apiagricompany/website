@@ -136,6 +136,35 @@ skel.init({
 
 			}
 
-	});
+			//Show more buttons
+			$('a.show-more').click(function(e){
+				var totalHeight = 0,
+				$el = $(this),
+				$up = $el.parent(),
+				$ps =$up.find('.text-wrapper'),
+				$fade = $up.find('div.fade');
 
+				$ps.each(function(){
+					totalHeight +=$(this).outerHeight();
+				});
+				totalHeight += $el.outerHeight();
+
+				$up
+					.css({
+						// Set height to prevent instant jumpdown when max height is removed
+				  		"height": $up.height(),
+				  		"max-height": 9999
+					})
+					.animate({
+      					"height": totalHeight
+    				});
+
+				$el.fadeOut();
+				$fade.fadeOut();
+
+				return false;
+			});
+	});
 })(jQuery);
+
+
