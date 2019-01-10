@@ -122,6 +122,8 @@
 			background: none;
 			display: block;
 			padding: 0 1.5em;
+			margin-right: auto;
+			max-width: 100%;
 		}
 
 			#banner .inner header h2 {

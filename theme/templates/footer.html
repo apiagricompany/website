@@ -1,15 +1,23 @@
 <!-- Footer -->
 <footer id="footer">
+    <div class="row">
+    <div class="3u">
+        <h1 class="logo">
+            <a href="{{ SITEURL }}"><img src="{{ SITELOGO }}"/></a>
+        </h1>
+    </div>
+    <div class="6u">
+        <p><a href="mailto:info@apiagri.com">info@apiagri.com</a></p>
+        <span class="copyright">&copy; ApiAgri {{ CURRENTYEAR }}. Todos os direitos reservados. Design: <a href="http://html5up.net">HTML5 UP</a> e <a href=https://getpelican.com/">Pelican</a>.</span>
+    </div>
 
-    <ul class="icons">
-      {% for title, link in SOCIAL %}
-        <li>
-          <a href="{{ link }}" class="icon circle fas fa-{{ title }}"><span class="label">{{ title }}</span></a>
-        </li>
-      {% endfor %}
-    </ul>
-
-    <p><a href="mailto:info@apiagri.com"><i class="fas fa-envelope"></i>info@apiagri.com</a></p>
-    <span class="copyright">&copy; ApiAgri. Todos os direitos reservados. Design: <a href="http://html5up.net">HTML5 UP</a> e <a href=https://getpelican.com/">Pelican</a>.</span>
-
+    <div class="3u">
+        <ul class="icons">
+        {% for title, link in SOCIAL %}
+            <li>
+            <a href="{{ link }}" class="icon circle fab fa-{{ title }}"><span class="label">{{ title }}</span></a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
 </footer>
