@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-
+from datetime import date
 import sys
 sys.path.append('.')
 
@@ -9,6 +9,8 @@ AUTHOR = 'ApiAgri'
 SITENAME = 'ApiAgri'
 SITEURL = 'apiagri.com'
 SITELOGO = 'images/logo.png'
+SITELOGOWEBP = 'images/logo.webp'
+APPURL = "https://"
 THEME = "theme"
 PATH = "content"
 TIMEZONE = 'America/Sao_Paulo'
@@ -32,8 +34,15 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('facebook-f', 'https://www.facebook.com/apiagricompany'),
+          ('instagram', 'https://www.instagram.com/apiagricompany'),)
+
+MENUITEMS = (('O que é ApiAgri?', '#oquee'),
+    ('Como Funciona?', '#como'),
+    # ('Baixe o APP', '#download'),
+    ('Nossa Equipe', '#equipe'),
+    ('Benefícios', '#beneficios'),
+    ('Cadastre-se', '#cta'))
 
 #DEFAULT_PAGINATION = 3
 #POST_LIMIT = 3
@@ -77,3 +86,6 @@ STATIC_PATHS = [
 ]
 
 DISPLAY_BLOG_ON_MENU = False
+
+
+CURRENTYEAR = date.today().year

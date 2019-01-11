@@ -5,6 +5,7 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
+DISTDIR=$(BASEDIR)/dist
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 THEMEDIR=$(BASEDIR)/theme
@@ -69,18 +70,20 @@ html:
 	cp -rf $(THEMEDIR)/static/js/* $(OUTPUTDIR)/js/
 	cp -rf $(THEMEDIR)/static/fonts/* $(OUTPUTDIR)/fonts/
 	cp -rf $(THEMEDIR)/static/images/* $(OUTPUTDIR)/images/
+	npm run gulp
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	[ ! -d $(DISTDIR) ] || rm -rf $(DISTDIR)
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
 ifdef PORT
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
+	cd $(DISTDIR) && $(PY) -m pelican.server $(PORT)
 else
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server
+	cd $(DISTDIR) && $(PY) -m pelican.server
 endif
 
 serve-global:
@@ -115,7 +118,7 @@ dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
 
 ftp_upload: publish
-	lftp -d ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
+	lftp -d ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(DISTDIR) $(FTP_TARGET_DIR) ; quit"
 
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type --no-mime-magic --no-preserve
