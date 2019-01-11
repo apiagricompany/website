@@ -5,7 +5,7 @@
 */
 
 /* Basic */
-
+@media only screen and (max-width: 640px){
 	body {
 		min-width: 320px;
 	}
@@ -33,7 +33,6 @@
 		}
 
 		header.special {
-			margin-bottom: 3em;
 			padding-left: 1.5em;
 			padding-right: 1.5em;
 		}
@@ -90,7 +89,8 @@
 
 	.wrapper {
 		margin-bottom: 2.5em;
-		padding: 2.25em 1.5em;
+		padding: 2.25em 0.5em;
+		font-size: 0.8em;
 	}
 
 		.wrapper.special br {
@@ -114,7 +114,6 @@
 /* Banner */
 
 	#banner {
-		background-size: 10em, 10em, auto, cover;
 		padding: 6em 0;
 	}
 
@@ -146,7 +145,9 @@
 	}
 
 	body.index #main {
-		padding: 2.5em 0 0 0;
+		margin-top: -90px;
+		width: 90%;
+		font-size: 0.8em;
 	}
 
 	body.contact #main {
@@ -165,3 +166,32 @@
 	#footer {
 		padding: 3em 1.5em;
 	}
+
+	.image.feature img{
+		width: 150px;
+		height: 150px;
+	}
+
+	.team .member p{
+		font-size: 0.8em;
+		line-height: 2;
+	}
+
+	section.register .row div {
+		padding: 0 !important;
+		min-height: 300px;
+		margin: 0 0 10px 0;
+	}
+
+	section.register .row div a.button{
+		padding: 5px;
+	}
+
+	#footer p{
+		text-align: center;
+	}
+
+	#footer span{
+		font-size: 0.6em;
+	}
+}

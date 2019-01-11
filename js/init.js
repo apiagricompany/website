@@ -19,10 +19,8 @@ skel.init({
 
 		// Transform test.
 			transformTest: function() {
-
 				// Only use CSS transforms with touch devices.
-					return (skel.vars.isTouch);
-
+				return (skel.vars.isTouch);
 			},
 
 		// Layers.
