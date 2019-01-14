@@ -15,6 +15,13 @@ THEME = "theme"
 PATH = "content"
 TIMEZONE = 'America/Sao_Paulo'
 
+PLUGIN_PATHS = ['./plugins/']
+PLUGINS = ['sitemap']\
+
+SITEMAP ={
+    'format': 'xml'
+}
+
 from utils import filters
 JINJA_FILTERS={ 'sidebar': filters.sidebar }
 

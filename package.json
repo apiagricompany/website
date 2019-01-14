@@ -1,0 +1,29 @@
+{
+  "name": "apiagri",
+  "version": "1.0.0",
+  "description": "ApiAgri Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://apiagricompany@bitbucket.org/apiagricompany/website.git"
+  },
+  "keywords": [
+    "apiagri",
+    "website"
+  ],
+  "author": "Jose A. Salim",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/apiagricompany/website#readme",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "inline-critical": "^5.1.2"
+  },
+  "devDependencies": {
+    "critical": "^2.0.0-10"
+  }
+}

@@ -1,25 +1,41 @@
-<html>
+<!doctype html>
+<html lang="pt">
 <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="canonical" href="{{ SITEURL }}">
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="{{ DESCRIPTION }}" />
+    <meta name="keywords" content="{{ KEYWORDS }}" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="google-site-verification" content="D9aTjhyKnadq5dYSD6BCNm0QhTi6TLAhZaavF8d23xc" />
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link rel="preconnect dns-prefetch" href="//cdnjs.cloudflare.com/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="//use.fontawesome.com" crossorigin>
+
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/modernizr-webp.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/skel-layers.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel-layers.min.js"></script> -->
     <script src="/js/init.js"></script>
-    <link rel="stylesheet" href="/css/pygment.css" />
+    <link rel="stylesheet" href="/css/pygment.css" media="all"/>
+    <link rel="stylesheet" href="/css/main.css" media="all"/>
+    <link rel="stylesheet" href="/css/style.css" media="all"/>
+    <link rel="stylesheet" href="/css/style-mobile.css" media="(max-width: 480px)"/>
     <noscript>
-        <link rel="stylesheet" href="/css/skel.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/style-noscript.css" />
-        <link rel="stylesheet" href="/css/style-apiagri.css" />
+        <link rel="stylesheet" href="/css/skel.css" media="all"/>
+        <link rel="stylesheet" href="/css/style-noscript.css" media="all"/>
     </noscript>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
 
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
@@ -30,19 +46,22 @@
 
     {% block head %}
     <title>{% block title %}{{ SITENAME }} {{ TAGLINE }}{% endblock title %}</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width,mininum-scale=1,initial-scale=1">
+
     {% endblock head %}
 </head>
 
 <body class="{% if page_name %}{{ page_name|sidebar }}{% endif %} loading">
 
-
-
     <!-- Header -->
     <header id="header" {% if page_name == 'index' %}class="alt"{% endif %}>
         <h1 class="logo">
-            <a href="{{ SITEURL }}"><img src="{{ SITELOGO }}"/></a>
+            <a href="{{ SITEURL }}">
+                <picture>
+                    <source srcset="{{ SITELOGOWEBP }}" type="image/webp">
+                    <img src="{{ SITELOGO }}"/>
+                </picture>
+            </a>
         </h1>
         <nav id="nav">
             <ul>

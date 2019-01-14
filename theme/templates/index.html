@@ -1,5 +1,38 @@
 {% extends "base.html" %}
 
+  {% block head %}
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Webpage",
+      "url": "https://www.apiagri.com",
+      "name": "ApiAgri",
+      "headline": "Apiagri Homepage",
+      "description": "Polinização Agrícola Assistida",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.apiagri.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ApiAgri Desenvolvimento de Software LTDA.",
+        "logo": {
+          "url": "https://www.apiagri.com/images/logo.svg",
+          "width": 175,
+          "height": 60,
+          "@type": "ImageObject"
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.apiagri.com/images/logo.png",
+        "width": 120,
+        "height": 63
+      }
+    }
+    </script>
+  {% endblock %}
+
 {% include 'banner.html' %}
 
 {% block content %}
