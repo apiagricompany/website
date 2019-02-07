@@ -126,7 +126,7 @@
 	}
 
 	header.special {
-		margin-bottom: 0em;
+		margin: 0 10px 0 10px;
 		padding-top: 3em;
 		position: relative;
 		text-align: left;
