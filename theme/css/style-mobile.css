@@ -24,6 +24,10 @@
 		text-align: justify;
 	}
 
+	#main > header {
+		margin: 0 !important;
+	}
+
 	header {
 		text-align: center;
 	}

@@ -122,14 +122,13 @@
 	}
 
 	header.major {
-		padding-bottom: 2em;
+		padding: 2em 0 2em 0;
 	}
 
 	header.special {
-		margin: 0 10px 0 10px;
 		padding-top: 3em;
 		position: relative;
-		text-align: left;
+		text-align: justify;
 	}
 
 		header.special:before, header.special:after {
@@ -531,6 +530,7 @@
 			background: #fbc02d;
 			border-color: #fbc02d;
 			color: #1d1d1f;
+			height: auto;
 		}
 
 			.button.special:hover {
@@ -870,6 +870,10 @@
 		box-shadow: 0px 0px 10px 1px rgba(29,29,31,0.5);
 	}
 
+	#main > header {
+		margin: 0 3em 0 3em;
+	}
+
 		#main > :last-child {
 			margin-bottom: 0;
 		}
@@ -928,6 +932,7 @@
 		border-radius: 50%;
 		background-color: #1d1d1f;
 		padding-left: 0;
+		margin: 5px;
 	}
 
 	#footer ul.icons li a{
@@ -1155,11 +1160,6 @@ section.download .text-box img{
 	max-width: 200px;
 }
 
-
-section.team > header {
-	text-align: left;
-}
-
 section.team .row > * {
 	padding-left: 0;
 }
@@ -1223,4 +1223,31 @@ section.register .row div{
 
 .no-webp section.register .row div.beekeeper{
 	background: url('images/apis.png'), linear-gradient(rgba(29,29,31,1), rgba(29,29,31,1));;
+}
+
+#header nav ul li a.primary{
+	background-color: #1d1d1f;
+	color: #fbc02d;
+	border-radius: 5px;
+}
+
+#header nav ul li:hover > a.primary{
+	background-color: initial;
+}
+
+p.card-header-title{
+	margin: 0;
+	text-align: center;
+}
+
+.blog footer.card-footer {
+	background-color: #fbc02d;
+}
+
+.blog header.major h2{
+	color: #fbc02d;
+}
+
+#blog{
+	background-color: #1d1d1f;
 }
