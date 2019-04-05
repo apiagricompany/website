@@ -44,12 +44,12 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('facebook-f', 'https://www.facebook.com/apiagricompany'),
           ('instagram', 'https://www.instagram.com/apiagricompany'),)
 
-MENUITEMS = (('O que é ApiAgri?', '#oquee'),
-    ('Como Funciona?', '#como'),
+MENUITEMS = (('O que é ApiAgri?', '#oquee', ''),
+    ('Como Funciona?', '#como', ''),
     # ('Baixe o APP', '#download'),
-    ('Nossa Equipe', '#equipe'),
-    ('Benefícios', '#beneficios'),
-    ('Cadastre-se', '#cta'))
+    ('Nossa Equipe', '#equipe', ''),
+    ('Blog', 'https://blog.apiagri.com', 'primary'),
+    ('Cadastre-se', '#cta', ''))
 
 #DEFAULT_PAGINATION = 3
 #POST_LIMIT = 3

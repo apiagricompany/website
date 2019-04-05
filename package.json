@@ -19,11 +19,12 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/apiagricompany/website#readme",
   "dependencies": {
+    "bulma": "^0.7.4",
     "gulp": "^4.0.0",
     "gulp-htmlmin": "^5.0.1",
     "inline-critical": "^5.1.2"
   },
   "devDependencies": {
-    "critical": "^2.0.0-10"
+    "critical": "^2.0.0-15"
   }
 }

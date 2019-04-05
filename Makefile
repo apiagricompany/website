@@ -1,6 +1,8 @@
 PY?=python3
 PELICAN?=pelican
+FEEDER=python feeder.py
 PELICANOPTS=
+FEED_URL=https://blog.apiagri.com/feed/rss2
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -14,7 +16,7 @@ FTP_HOST=ftp.apiagri.com
 FTP_USER=website_admin@apiagri.com
 FTP_TARGET_DIR=/
 
-SSH_HOST=apiagri.com
+SSH_HOST=apiagri
 SSH_PORT=2222
 SSH_USER=apiagric
 SSH_TARGET_DIR=~/public_html
@@ -64,6 +66,7 @@ help:
 	@echo '                                                                          '
 
 html:
+	$(FEEDER) $(FEED_URL) $(THEMEDIR)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 	mkdir -p $(OUTPUTDIR)/css/ $(OUTPUTDIR)/js/ $(OUTPUTDIR)/fonts/ $(OUTPUTDIR)/images/
 	cp -rf $(THEMEDIR)/static/css/* $(OUTPUTDIR)/css/

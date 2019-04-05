@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="pt">
 <head>
     <meta charset="utf-8">
@@ -26,8 +26,8 @@
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js"></script> -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel-layers.min.js"></script> -->
     <script src="/js/init.js"></script>
+    <link rel="stylesheet" href="/css/bulma.min.css" media="all"/>
     <link rel="stylesheet" href="/css/pygment.css" media="all"/>
-    <link rel="stylesheet" href="/css/main.css" media="all"/>
     <link rel="stylesheet" href="/css/style.css" media="all"/>
     <link rel="stylesheet" href="/css/style-mobile.css" media="(max-width: 480px)"/>
     <noscript>
@@ -37,6 +37,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/abelha-icon.png"/>
 
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
@@ -71,8 +73,12 @@
                         <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
                 {% endif %}
-                {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
+                {% for title, link, class in MENUITEMS %}
+                    {%if title == 'Blog' %}
+                        <li><a href="{{ link }}" class="{{ class }}" target="_blank">{{ title }}</a></li>
+                    {% else %}
+                        <li><a href="{{ link }}" class="{{ class }}">{{ title }}</a></li>
+                    {% endif %}
                 {% endfor %}
                 {% if DISPLAY_BLOG_ON_MENU %}
                 <li class="submenu">
