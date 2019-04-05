@@ -5,8 +5,8 @@ from datetime import date
 import sys
 sys.path.append('.')
 
-AUTHOR = 'ApiAgri'
-SITENAME = 'ApiAgri'
+AUTHOR = 'Apiagri'
+SITENAME = 'apiagri'
 SITEURL = 'apiagri.com'
 SITELOGO = 'images/logo.png'
 SITELOGOWEBP = 'images/logo.webp'
@@ -44,7 +44,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('facebook-f', 'https://www.facebook.com/apiagricompany'),
           ('instagram', 'https://www.instagram.com/apiagricompany'),)
 
-MENUITEMS = (('O que é ApiAgri?', '#oquee', ''),
+MENUITEMS = (('O que é Apiagri?', '#oquee', ''),
     ('Como Funciona?', '#como', ''),
     # ('Baixe o APP', '#download'),
     ('Nossa Equipe', '#equipe', ''),
