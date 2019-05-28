@@ -1160,24 +1160,18 @@ section.download .text-box img{
 	max-width: 200px;
 }
 
-section.team .row > * {
+section.team .columns > * {
 	padding-left: 0;
 }
 
-section.team .row .member > section{
-	border-radius: 15px;
-	-webkit-box-shadow: 0px 0px 10px 1px rgba(29,29,31,0.5);
-	-moz-box-shadow: 0px 0px 10px 1px rgba(29,29,31,0.5);
-	box-shadow: 0px 0px 10px 1px rgba(29,29,31,0.5);
-	padding: 20px;
-	max-height: 800px;
+section.team .columns .member > section{
+	max-height: 60vh;
 	position: relative;
 	overflow: hidden;
-	margin: 0 10px 0 10px;
   	transition: max-height .5s ease;
 }
 
-section.team .row .member .fade {
+section.team .columns .member .fade {
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%);
   height: 150px;
   width: 100%;
@@ -1185,7 +1179,7 @@ section.team .row .member .fade {
   bottom: 0;
 }
 
-section.team .row .member a.button{
+section.team .columns .member a.button{
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -1250,4 +1244,34 @@ p.card-header-title{
 
 #blog{
 	background-color: #1d1d1f;
+}
+
+.newsletter-banner{
+	height: 300px;
+	background: linear-gradient(to right,rgba(11, 11, 12, 0.1),rgba(11, 11, 12, 0.7)),url('images/jatai.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 20%;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.newsletter-banner h2 {
+	color: #fff;
+}
+
+.newsletter-banner .container{
+	text-align: center;
+}
+
+.team .member .text-wrapper p{
+	font-size: 1rem;
+}
+
+.team .member section{
+	max-height: 60vh;
+	position: relative;
+	overflow: hidden;
+	transition: max-height .5s ease;
 }
