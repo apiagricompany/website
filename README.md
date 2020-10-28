@@ -10,7 +10,7 @@ $ git clone https://apiagricompany@bitbucket.org/apiagricompany/website.git
 After that, enter master branch and checkout `source` branch:
 ```console
 $ cd website
-$ git checkout -b source
+$ git checkout source
 ```
 
 Change your stuff. If you have commit authorization to master, just do:
