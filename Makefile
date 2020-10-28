@@ -1,13 +1,13 @@
 PY?=python3
 PELICAN?=pelican
-FEEDER=python feeder.py
+FEEDER=python3 feeder.py
 PELICANOPTS=
 FEED_URL=https://blog.apiagri.com/feed/rss2
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
-DISTDIR=$(BASEDIR)/dist
+DISTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 THEMEDIR=$(BASEDIR)/theme

@@ -8,14 +8,14 @@ sys.path.append('.')
 AUTHOR = 'Apiagri'
 SITENAME = 'apiagri'
 SITEURL = 'apiagri.com'
-SITELOGO = 'images/logo.png'
-SITELOGOWEBP = 'images/logo.webp'
+SITELOGO = '/theme/images/logo.png'
+SITELOGOWEBP = '/theme/images/logo.webp'
 APPURL = "https://"
 THEME = "theme"
 PATH = "content"
 TIMEZONE = 'America/Sao_Paulo'
 
-PLUGIN_PATHS = ['./plugins/']
+PLUGIN_PATHS = ['../pelican-plugins/']
 PLUGINS = ['sitemap']\
 
 SITEMAP ={
